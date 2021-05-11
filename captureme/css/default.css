@@ -1,0 +1,54 @@
+/*모든 웹페이지 공통 css*/
+
+body{
+	background-image:url('../img/bg 3.png');
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin: 20px;
+	color: white;
+}
+
+a {
+	color: #fff; 
+	text-decoration: none; 
+	outline: none
+}
+
+ a:hover, a:active {
+ 	text-decoration: none; 
+ 	color:#fff; 
+ }
+ hr{
+ 	border:0;
+ 	background:white;
+ 	height:3px;
+ }
+input,button{
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: bold;
+	font-size: 15px;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.8);
+	border-width: 1.5px;
+	background-color: inherit;
+	border-radius: 3;
+	margin: 2px;
+	justify-content: center;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    padding-top: 1rem;
+}
+
+
+.contactInfo{
+	color:white;
+	text-align: center;
+	border-top: dotted 3px white;
+    padding-top: 5px;
+    margin-top: 5px;
+}

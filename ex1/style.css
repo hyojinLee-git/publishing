@@ -1,0 +1,52 @@
+:root{
+    --beige-color:#dcdbd9;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    height: 8vh;
+}
+.first-section{
+    position: relative;
+    height: 80vh;
+}
+
+.first-section .background{
+    background: var(--beige-color);
+    position: absolute;
+    right: 0;
+    width: 80%;
+    height:80%;
+    bottom:0;
+}
+.first-section img{
+    position: absolute;
+}
+.first-section img:nth-child(1){
+    width: 50px;
+    height: 50px;
+    right: 40%;
+}
+.first-section img:nth-child(2){
+    width: 50px;
+    height: 50px;
+}
+.first-section img:nth-child(3){
+    width: 50px;
+    height: 50px;
+}
+.first-section img:nth-child(4){
+    width: 50px;
+    height: 50px;
+}
+.first-section .text{
+    position: absolute;
+}

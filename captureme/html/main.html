@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture Me</title>
+    <link rel="stylesheet" href="../css/fontello-840194d4/css/fontello.css">
+    
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+    <header id="header">
+        <div class="CaptureMe"><a href="#">캡쳐미</a></div>
+        <div class="search">
+            <input type="text" id='searchbar'>
+            <button class="icon-search"></button>
+        </div>
+        <div class="configure">
+            <ul>
+                <li><a href="photographer" class="toggle_button">I Need </a></li>
+                <li><a href="mypage" >마이페이지</a></li>
+                <li><a href="http://localhost:8080/logoutPage">logout</a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="main">
+        <div class="column" id="photo">
+            <div class="container">
+                <a href="/rapa1130">
+                    <div class="overlay rectangle"></div>
+                    <img class="overlay profile" src="../img/profile/model_profile.jpg
+                    ">
+                    <div class="overlay text">정국</div>
+                </a>
+            </div>
+            <figure>
+                <img src="../img/model/model2.jpg">
+            </figure>
+            <figure>
+                <img src="../img/model/model3.jpg">
+            </figure>
+            <figure>
+                <img src="../img/model/model4.jpg">
+            </figure>
+            <figure>
+                <img src="../img/model/model5.jpg">
+            </figure>
+            <figure>
+                <img src="../img/model/model6.jpg">
+            </figure>
+            <figure>
+                <img src="../img/model/model7.jpg">
+            </figure>
+            <figure>
+                <img src="../img/model/model8.jpg">
+            </figure>
+            <figure>
+                <img src="../img/model/model9.jpg">
+            </figure>
+        </div>
+        <!-- <div class="profile">
+            <figure>
+                <img src="../img/profile/model_profile.jpg">
+            </figure>
+        </div> -->
+        <!--page number-->
+        <!--서버에서 처리-->
+        <div class="page_number" style="border: solid,3px,red;">
+            <input type="button" value="<">
+            <input type="button" value="1" style="text-decoration: underline;" class="number active">
+            <a href='main_page2.html'><input type="button" value="2" class="number"></a>
+            <input type="button" value="3" class="number">
+            <input type="button" value=">" onclick="nextPage()">
+        </div>
+    </section>
+    <footer class="contactInfo">
+        <div>Copyright ⓒ 2020 captureMe All Rights Reserved</div>
+    </footer>
+
+</body>
+</html>

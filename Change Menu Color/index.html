@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        body{
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        a{
+            text-decoration: none;
+            color: #999;
+        }
+        header{
+            height: 50px;
+            
+        }
+        ul{
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ul li{
+            font-size: 20px;
+            margin: 0 20px;
+        }
+
+        .active{
+            color:darkcyan;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="nav-bar">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Books</li></a>
+            <a href="#"><li>Portfolio</li></a>
+            <a href="#"><li>Contact</li></a>
+        </ul>
+    </header>
+    <script>
+        const menu=document.querySelector('.nav-bar');
+        let currentMenu;
+
+        function clickHandler(event){
+            console.log(currentMenu);
+            console.log(event.target.classList)
+            if(currentMenu){
+               currentMenu.classList.remove('active');
+            }
+            event.target.classList.add('active');
+            currentMenu=event.target
+        }
+
+        menu.addEventListener('click',clickHandler);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        body{
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        header{
+            height: 50px;
+            background-color: yellowgreen;
+            
+        }
+        ul{
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ul li{
+            font-size: 20px;
+            margin: 0 20px;
+        }
+        #marker{
+            position: absolute;
+            left:0px;
+            height: 1px;
+            width: 0px;
+            background: #fff;
+            bottom: 8px;
+            transition: 300ms ease-in;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <ul class="nav-bar">
+            <div id="marker"></div>
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Books</li></a>
+            <a href="#"><li>Portfolio</li></a>
+            <a href="#"><li>Contact</li></a>
+        </ul>
+    </header>
+    <script>
+        //웹페이지 전체 사이즈 변할때 버그 생김
+
+        const marker=document.querySelector('#marker');
+        const menu=document.querySelector('.nav-bar')
+
+        function indicator(event){
+            marker.style.left=`${event.offsetLeft}px`;
+            marker.style.width=`${event.offsetWidth}px`;
+            //console.log(event.offsetLeft, event.offsetWidth);
+        }
+
+        menu.addEventListener('click',event=>{
+            //console.log(event.target.nodeName);
+            if(event.target.nodeName==='LI'){
+                indicator(event.target)
+            }
+        })
+    </script>
+</body>
+</html>

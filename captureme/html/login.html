@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/login.js"> </script>
+</head>
+<body>
+    <header id="login_header">
+        <h1>캡쳐미</h1>
+    </header>
+    <div class="login_container">
+        <h2>Log In</h2>
+        <form class="login" action="http://localhost:8080/loginPage" method="POST">
+            <table>
+                <tr>
+                    <td><input class=name type="text" placeholder="ID" name="id"></td>
+                </tr>
+                <tr>
+                    <td><input class=name type="password" placeholder="password" name="password"></td>
+                </tr>
+            </table>
+            <div>
+                <button class="submit" onclick="login()">Login</button>
+            </div>
+        </form>
+        <div class="apply">
+            <a href="apply">회원가입</a>
+        </div>
+    </div>
+</body>
+</html>

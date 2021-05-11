@@ -1,0 +1,34 @@
+h1{
+	text-align: center;
+	font-size: 50px;
+}
+.tabButton{
+	width:33%;
+	border-bottom-style:none;
+	padding: 10px;
+	background-color: rgba(255,255,255,0.15);
+	border-radius: 10px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	margin: 10px;
+}
+.tabButtonClicked{
+	width:33%;
+	border-bottom-style:none;
+	padding: 10px;
+	background-color: white;
+	color:black;
+}
+
+article>a{
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: bold;
+	font-size: 15px;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.8);
+	border-width: 1.5px;
+	background-color: inherit;
+	border-radius: 2rem;
+	margin: 2px;
+	justify-content: center;
+}
