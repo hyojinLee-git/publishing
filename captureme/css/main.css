@@ -28,18 +28,21 @@ body{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 
-
 .column .container{
     display: flex;
     position: relative;
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
     flex-direction: column;
-    background: url('../img/model/model1.jfif');
-    background-size: cover;
-    
 }
 
+.column .container .represent{
+    display: inline-block;
+    width: 100%;
+    min-height: 400px;
+    height: auto;
+    border-radius: 1.5rem;
+}
 .column .container .rectangle{
     width: 100%;
     height: 50%;
@@ -75,18 +78,47 @@ body{
     opacity: 0;
     color: black;
     box-shadow: none;
+    font-size: 1.5rem;
 }
+.column .container ul{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    list-style: none;
+    opacity: 0;
+    margin:0;
+    /* border: 3px red solid; */
+}
+.column .container .contact li{
+    color:black;
+    margin-right: 3px;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 3px;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.column .container .contact li a{
+    color:rgb(10, 10, 10);
+    font-size: 1.5rem;
+}
+.column .container:hover .represent{
+    opacity: 0.5;
+}
+
 .column .container:hover .overlay{
     opacity: 1;
 }
-.column .container:hover .thumbnail{
-    opacity: 1;
-}
+
 
 .column figure img, .column div .thumbnail{
     width:100%;
     border-radius: 1.5rem;
-    
 }
 
 .page_number{
