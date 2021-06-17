@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, li{
+            list-style: none;
+        }
+        .slide{
+            height: 150px;
+            overflow: hidden;
+            border: 1px solid;
+        }
+        .slide ul{
+            height: 100%;
+        }
+        .slide ul li{
+            height: 100%;
+        }
+        .slide li:nth-child(1){background: #faa;}
+        .slide li:nth-child(2){background: #afa;}
+        .slide li:nth-child(3){background: #aaf;}
+        .slide li:nth-child(4){background: #faf;}
+
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <button id="prev">prev</button>
+    <button id="next">next</button>
+    <script>
+        const all=ele=>document.querySelectorAll(ele);
+        const one=ele=>document.querySelector(ele);
+        const prev=document.querySelector('#prev');
+        const next=document.querySelector('#next');
+        const slide=()=>{
+            const wrap=one('.slide');   //slide div 선택
+            const target=wrap.children[0];  //slide ul 선택
+            const len=target.children.length    //li의 개수
+
+            //slide의 너비 조정
+            target.style.cssText=`width:calc(100% * ${len}); display:flex; transition:1s`;
+
+            Array.from(target.children).forEach(ele=>ele.style.cssText=`width:calc(100% /${len});`);
+
+            // let pos=0;
+            // setInterval(()=>{
+            //     pos=(pos+1)%len;
+            //     target.style.marginLeft=`${-pos*100}%`;
+            // },1500)
+        }
+        prev.addEventListener('click',()=>{
+            
+        })
+
+        slide();
+    </script>
+</body>
+</html>
