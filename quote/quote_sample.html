@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        body{
+            background-color: #fafafa;
+        }
+        span{
+            font-size: 24px;
+        }
+        .modal{
+            display: none;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal .bg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .modal .bg .content{
+            height: 50%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+        textarea{
+            margin: 10px;
+            width: 50%;
+            height: 20%;
+        }
+        button{
+            cursor: pointer;
+        }
+        .controls_colors{
+            display: flex;
+            margin: 10px;
+        }
+
+        .controls_colors .controls_color{
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0, 0, 0 0.08);
+        }
+    </style>
+</head>
+<body>
+    <span class="quote"></span>
+    <div class="controls_colors" id=jsColors>
+        <div class="controls_color jsColor" style="background: white;"></div>
+        <div class="controls_color jsColor" style="background: #ff3b30;"></div>
+        <div class="controls_color jsColor" style="background: #ff9500;"></div>
+        <div class="controls_color jsColor" style="background: #2c2c2c;"></div>
+        <div class="controls_color jsColor" style="background: #ffcc00;"></div>
+        <div class="controls_color jsColor" style="background: #4cd963;"></div>
+        <div class="controls_color jsColor" style="background: #5ac8fa;"></div>
+        <div class="controls_color jsColor" style="background: #0579ff;"></div>
+        <div class="controls_color jsColor" style="background: #5856d6;"></div>
+    </div>
+    <button class="modalHandler">Get Code</button>
+    <div class="modal">
+        <div class="bg">
+            <div class="content">
+                <h1>Copy the Following Code</h1>
+                <textarea></textarea>
+                <button class="copy">Copy to clipboard</button>
+                <button class="close">Close</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="quote.js"></script>
+</body>
+</html>
