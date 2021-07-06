@@ -4,6 +4,7 @@ button {
   background: none;
   cursor: pointer;
 }
+
 .background {
   /* background: url('https://source.unsplash.com/random/1536*722/?nature'); */
   width: 100vw;
@@ -87,10 +88,12 @@ header .introduce {
 
 .container .create-widget:hover {
   /* background-color: rgba(235, 235, 235, 0.5); */
-  border: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
 }
 
 /*          WIDGET          */
+/*    setting     */
 .container .widget {
   display: none;
   position: absolute;
@@ -108,11 +111,33 @@ header .introduce {
   background-color: #f5f5f5;
   width: 40%;
   border-top-left-radius: 50px;
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; */
 }
+.container .widget .setting .wrapper-setting {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* border: 1px solid red; */
+  height: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.container .widget .setting .wrapper-setting h2 {
+  font-size: 30px;
+  margin-bottom: 5rem;
+  font-weight: bold;
+}
+.container .widget .setting .wrapper-setting .set-bg,
+.set-fontColor {
+  margin-left: 3rem;
+}
+.container .widget .setting .wrapper-setting h3 {
+  font-size: 1rem;
+}
+
 .controls_colors {
   display: flex;
   margin: 10px;
@@ -121,10 +146,30 @@ header .introduce {
 .controls_colors .controls_color {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 10px;
+  margin-right: 1px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0 0.08);
 }
+.container .widget .setting .get-code {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1rem;
+  background-color: #e6e6e6;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+}
+.container .widget .setting .get-code:hover {
+  border-bottom: solid 1px;
+  border-right: 1px solid;
+  box-sizing: border-box;
+}
+.container .widget .setting .get-code:active {
+  border: none;
+}
+
+/*    display     */
 .container .widget .widget-display {
   height: 100%;
   position: absolute;
@@ -178,34 +223,41 @@ header .introduce {
   top: 0;
   left: 0;
 }
-
+.modal .close {
+  width: 2rem;
+  position: absolute;
+  top: 25%;
+  left: 65%;
+  cursor: pointer;
+  margin-left: 2px;
+}
+.modal .close span {
+  display: inline-block;
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+}
+.modal .close span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+}
+.modal .close span:nth-child(2) {
+  -webkit-transform: translateY(-16px) rotate(-45deg);
+}
 .wrapper {
   background-color: white;
   border-radius: 5px;
-
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
   width: 30%;
   height: 50%;
-  position: absolute;
 }
-.wrapper .close {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  border: 1px solid white;
-}
+
 .wrapper .title {
   font-size: 2rem;
-  /* 무슨색하지 */
-  background-color: #f5f5f5;
+  background-color: rgb(255, 206, 189);
   height: 20%;
   display: flex;
   align-items: center;
@@ -234,6 +286,24 @@ header .introduce {
   font-size: 1rem;
   line-height: 1.2rem;
 }
+/* .wrapper .button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+}
+.wrapper .button button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-right: 5px;
+}
+.wrapper .button button:hover {
+  background-color: lightgray;
+}
+.wrapper .button .copy {
+  color: green;
+} */
 .wrapper .copy {
   position: absolute;
   bottom: 0;

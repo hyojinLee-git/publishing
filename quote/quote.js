@@ -13,6 +13,9 @@ const copy = document.querySelector('.copy');
 const textarea = document.querySelector('textarea');
 const toast = document.querySelector('.toast');
 
+//데이터 가져올 서버 주소
+const url = 'http://54.180.148.194/quote';
+
 //클라이언트 width, height에 따라서 bg 이미지 할당
 const clientWidth = document.querySelector('body').clientWidth;
 const clientHeight = document.querySelector('body').clientHeight;
@@ -23,7 +26,6 @@ function getQuote() {
   fetch('http://localhost:3000/quote')
     .then(res => res.json())
     .then(res => {
-      console.log(res);
       quote.innerHTML = `${res.message} -${res.author}`;
       widgetQuote.innerText = quote.innerHTML;
     })
@@ -34,7 +36,7 @@ getQuote();
 //1초에 한번씩 데이터 요청함(하루에 한번이면 1분에 한번씩?)
 setInterval(() => {
   const day = new Date();
-  console.log(day.getSeconds());
+  //console.log(day.getSeconds());
   if (day.getSeconds() === 0) {
     //quote.innerHTML = '';
     getQuote();
@@ -62,7 +64,36 @@ fontColors.forEach(color =>
 
 //모달창 오픈
 getCode.addEventListener('click', () => {
-  textarea.value = widgetBg.outerHTML;
+  textarea.value = `${widgetBg.outerHTML}
+  <script>setInterval(()=>{
+    document.querySelector('.widget-quote').innerHTML='change quote'
+  },10000)</script>
+  `;
+
+  //   textarea.value = `
+  //   ${widgetBg.outerHTML}  //여기 걍 비워야될거같은데
+  // <script>
+  // function getQuote() {
+  //   fetch('http://localhost:3000/quote')
+  //     .then(res => res.json())
+  //     .then(res => {
+  //       document.querySelector('.widget-quote').innerHTML = res.message -res.author;
+  //     })
+  //     .catch(error => alert('통신에러!'));
+  // }
+  // getQuote();
+
+  // setInterval(() => {
+  //   const day = new Date();
+  //   console.log(day.getSeconds());
+  //   if (day.getSeconds() === 0) {
+  //     //quote.innerHTML = '';
+  //     getQuote();
+  //   }
+  // }, 1000);
+  // </script>
+  //   `;
+
   modal.style.display = 'block';
 });
 
@@ -92,9 +123,9 @@ copy.addEventListener('click', () => {
 });
 
 //닫기버튼
-close.forEach(close =>
-  close.addEventListener('click', () => {
-    widget.style.display = 'none';
-    modal.style.display = 'none';
-  }),
-);
+close[0].addEventListener('click', () => {
+  widget.style.display = 'none';
+});
+close[1].addEventListener('click', () => {
+  modal.style.display = 'none';
+});
